@@ -1,10 +1,20 @@
 body {
-  background-color: pink;
+  background-color: white;
 }
 
 .header {
-
-
+  display: flex;
+  align-items: center;
+  /*hierdoor komen het logo,zoek-icoon en menu op 1 horizontale lijn te staan*/
+  background-color: white;
+  gap: 16px;
+  /*ruimte tussen het zoekicoon en het menu*/
+  position: relative;
+  /*zorgt ervoor dat het zoekveld geposioneerd kan worden ten
+  opzichte van de header*/
+  z-index: 1;
+  /*bepaalt welk element boven op een ander elemetn wordt weergegeven*/
+  
 }
 
 .menu{
@@ -12,11 +22,117 @@ body {
 
 }
 
+.menu-icon{
+  list-style: none;
+  background-color: #FED200;
+  padding: 0px;
+  /*geeft ruimte rondom het menu-icon*/
+  border-radius: 8px;
+  /*maakt de hoeken afgerond*/
+  display: inline-flex;
+  /*zorght ervoor dat het gele vlek niet onnodig de volledige beschikbare
+  breedte inneemt*/
+  align-items: center;
+  /*centreert het icoon*/
+  justify-content: center;
+  /*centreert het icoon horizontaal*/
+
+
+  img{
+    width: 32px;
+    height: 32px;
+    display: block;
+    /*voorkomt extra ruimte onder de afbeelding*/
+  }
+}
+
+.nav-links{
+
+}
+
+.search {
+  position: static;
+  border: none;
+  /*verwijdert rand zoekbalk*/
+  background: none;
+  padding: 0;
+  /*verwijdert de binnenruimte*/
+  margin: 0;
+  /*verwijdert de buitenruimte*/
+  width: auto;
+  /*voorkomt dat het zoekgedeelte onnodig breed wordt*/
+
+  label{
+    display: none;
+  
+  }
+
+  form {
+    /*selecteert het formulier*/
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    
+    input {
+      /*selecteert het invoerveld binnen het formulier*/
+      color: black;
+      font-family: inherit;
+      border: none;
+      /*verwijdert de rand rondom het invoerveld*/
+      border-bottom: 1px solid black;
+      outline: none;
+      /*verwijdert de focusrand wanneer je in het invoerveld klikt*/
+      background: white;
+      padding: 8px;
+      appearance: none;
+      /*verwijdert de standaard browseropmaak, zoals het standaard zoekicoontje*/
+      width: 100%;
+      box-sizing: border-box;
+    }
+  }
+}
+
+ 
+.search-icon{
+  list-style: none;
+  /*verwijdert het standaard driehoekje van de summary*/
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0px;
+  /*haalt extra ruimte rondom het zoekicoon weg*/
+  background: none;
+  border: none;
+
+  img{
+    width: 40px;
+    /*bepaalt breedte*/
+    height: 40px;
+    /*bepaalt hoogte*/
+  }
+}
+
+.logo{
+  margin-right: auto;
+  /*hierdoor schuift het logo naar links en komen het zoekicoon en menu aan de 
+  rechtekant te staan*/
+
+  img{
+    width: 120px;
+  }
+}
 
 
 
 .intro{
   position: relative;
+}
+
+.intro-text{
+
 }
 
 .test { 
@@ -27,6 +143,122 @@ body {
 
 }
 
+.latest-updates{
+
+}
+
+.category-filter{
+
+}
+
+.news-card-studenten{
+
+}
+
+.news-image{
+  color: red;
+
+  p {
+    color: aqua;
+  }
+
+}
+
+.news-content{
+
+
+}
+
+/*deze staat voor de informatie van de nieuwskaart*/
+.news-meta{
+
+
+}
+
+.news-card-onderzoek{
+
+
+}
+
+.news-img{
+
+}
+
+.news-content{
+
+
+}
+
+.news-meta{
+
+
+}
+
+.news-card-campus{
+
+
+}
+
+.news-image{
+
+
+}
+
+.news-content{
+
+
+}
+
+.news-meta{
+
+
+}
+
+.news-card-maatschappij{
+
+
+}
+
+.news-image{
+
+
+}
+
+.news-content{
+
+}
+
+.news-meta{
+
+
+}
+
+.news-card-technologie{
+
+
+}
+
+.news-image{
+
+}
+
+/* .news-content{
+
+
+} */
+
+.news-meta{
+
+
+}
+
+
+
 h3 {
   color: blueviolet;
 }
+
+/*je heoft niet elke keer dezelde classes te gebruiken alz e allemaal toch dezelfde styling krijgen,
+stel je gebruikt dus die div en die hebben allemaal dezelfde styling dan kun je dat 1 keer benoemen,
+maar stel dat je dan later weer een div ergens voor gebruikt, die moet je dan wel weel een class geven
+omdat je daar waarscijnlijl een andere styling zal gebruiken*/
