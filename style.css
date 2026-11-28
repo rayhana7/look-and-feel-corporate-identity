@@ -186,7 +186,7 @@ body {
   position: absolute;
   color: white;
   top: 18%;
-  /*plaats de tekst 25% vanaf de bovenkant van de afbeelding*/
+  /*plaats de tekst 18% vanaf de bovenkant van de afbeelding*/
   left: 0;
   /*begint de tekst aan de linkerkant*/
   width: fit-content;
@@ -408,11 +408,6 @@ omdat je daar waarscijnlijl een andere styling zal gebruiken*/
 /*tablet*/
 @media (min-width: 768px) and (max-width: 1023px) {
  /* het is scherm moet minimaal 768px breed zijn en mag maximaal 1023px breed zijn*/
-  
- .intro img{
-  object-position: left center;
- }
- 
  .search{
     form{
       width: 250px;
