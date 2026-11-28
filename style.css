@@ -144,11 +144,91 @@ body {
 
 .intro{
   position: relative;
+  margin-top: 25px;
+  }
+
+.intro::before {
+/*maakt een extra laag vor de inhoud van .intro*/
+  content: "";
+/*zorgt ervoor dat de extra laag daadwerkelijk wordt aangemaakt*/
+  position: absolute;
+/*plaatst de laag boven de bannerafbelding*/
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 16px;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.75), transparent);
+/*geeft de laag een kleurverloop, overgang loopt van links naa rechts*/
+  z-index: 1;
+/*plaatst de donkere waas boven de afbeelding*/
+
+}
+
+
+
+.intro img {
+  width: 100%;
+  height: 100vw;
+  /*de hoogte schaalt mee met de breedte van het scherm*/
+  max-height: 520px;
+  object-fit: cover;
+  /*afbeelding vult het hele formaat zonder vervormd te worden*/
+  object-position: left center;
+  display: block;
+  /*voorkomt een klein wit randje onder de afbeelding*/
+  border-radius: 16px;
+
+
 }
 
 .intro-text{
-
+  position: absolute;
+  color: white;
+  top: 18%;
+  /*plaats de tekst 25% vanaf de bovenkant van de afbeelding*/
+  left: 0;
+  /*begint de tekst aan de linkerkant*/
+  width: fit-content;
+  /*het vlak past zich aan de inhoud aan*/
+  max-width: 100%;
+  padding: 16px 20px 16px 25px;
+  /*ruimte boven,rechts, onder en links*/
+  /*background-color: rgba(0,0,0,0.7);*/
+  /*geeft het vlak een zwarte achtergrond, de laatste waarde bepaalt transparantie*/
+  box-sizing: border-box;
+  /*zorgt ervoor dat de 16px binnen de 100% breedte vallen*/
+  z-index: 2;
 }
+
+.intro-text h1{
+  font-size: 50px;
+  line-height: 1.0;
+  /*zorgt ervoor dat de regels dichter bij elkaar staan*/
+  color: white;
+  /*letterkleur voor de titel*/
+  text-align: left;
+  /*lijnt de titel links uit*/
+  background: none;
+  margin-bottom: 20px;
+  /*maakt ruimte onder de titel*/
+  text-shadow: 2px 2px 10px rgba(0,0,0,0.8);
+  
+}
+
+.intro-text p {
+  color: white;
+  /*letterkleur voor de introductie tekst*/
+  font-size: 20px;
+  line-height: 1.1;
+  margin-top: 0px;
+  /*maakt ruimte boven de introcutietekst*/
+  text-align: left;
+  /*lijnt de introductietekst links uit*/
+  text-shadow: 2px 2px 60px rgb(0,0,0, 1);
+}
+
+
 
 .test { 
   position: absolute;
@@ -305,12 +385,35 @@ omdat je daar waarscijnlijl een andere styling zal gebruiken*/
     padding: 4px 8px;
     /*4px staat voor ruimte boven en onder, 8px staat voor links en recht*/
   }
+
+  .intro-text{
+    top: 30%;
+    /*plaatst de tekst op dezelfde hoogte als mobiel*/
+    padding-left: 48px;
+    /*geeft de tekst meer ruimte vanaf de linkerkant*/
+  }
+
+  .intro-text h1 {
+    font-size: 64px;
+  }
+
+  .intro-text p{
+    font-size: 22px;
+  }
+
 }
+
+
 
 /*tablet*/
 @media (min-width: 768px) and (max-width: 1023px) {
  /* het is scherm moet minimaal 768px breed zijn en mag maximaal 1023px breed zijn*/
-  .search{
+  
+ .intro img{
+  object-position: left center;
+ }
+ 
+ .search{
     form{
       width: 250px;
 /*zoekbalk krijgt een vaste breedte van 250 pixels*/
@@ -326,6 +429,26 @@ omdat je daar waarscijnlijl een andere styling zal gebruiken*/
 
   .menu-icon{
     padding: 4px 8px;
+  }
+
+  .intro-text{
+    top: 30%;
+  /*plaatst de tekst op dezelfde hoogte als mobiel*/
+    padding-left: 40px;
+  /*geeft de tekst meer ruimte vanaf de linkerkant*/
+  }
+
+  .intro-text h1{
+    font-size: 55px;
+  }
+
+  .intro-text p{
+    font-size: 22px;
+    max-width: 450px;
+  /*zorgt ervoor dat de tekst eerder op een nieuwe regel begint*/
+    line-height: 1.2;
+  /*geeft wat meer ruimte tussen de regels*/
+
   }
 
 
