@@ -267,3 +267,38 @@ h3 {
 stel je gebruikt dus die div en die hebben allemaal dezelfde styling dan kun je dat 1 keer benoemen,
 maar stel dat je dan later weer een div ergens voor gebruikt, die moet je dan wel weel een class geven
 omdat je daar waarscijnlijl een andere styling zal gebruiken*/
+
+
+/*grotere schermen-desktop*/
+@media (min-width: 1024px) {
+  .search {
+    form{
+      width: 300px;
+      /*maakt het zoekformulier 300 pixels breed*/
+      top: 100%;
+      /*bepaalt afstand vanaf de bovenkant*/
+      left: auto;
+       /*schakelt de eerdere posiotnering vanaf LINKS uit*/
+      right: 0;
+       /*plaatst het zoekformulier aan de rechterkant van de header*/
+    }
+  }
+}
+
+/*tablet*/
+@media (min-width: 768px) and (max-width: 1023px) {
+ /* het is scherm moet minimaal 768px breed zijn en mag maximaal 1023px breed zijn*/
+  .search{
+    form{
+      width: 250px;
+/*zoekbalk krijgt een vaste breedte van 250 pixels*/
+      left: auto;
+      right: 0;
+    }
+  }
+
+
+
+}
+
+
