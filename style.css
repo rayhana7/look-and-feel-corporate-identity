@@ -7,7 +7,7 @@ body {
   align-items: center;
   /*hierdoor komen het logo,zoek-icoon en menu op 1 horizontale lijn te staan*/
   background-color: white;
-  gap: 4px;
+  gap: 2px;
   /*ruimte tussen het zoekicoon en het menu*/
   position: relative;
   /*zorgt ervoor dat het zoekveld geposioneerd kan worden ten
@@ -26,7 +26,7 @@ body {
 
 .menu-icon{
   list-style: none;
-  background-color: #FED200;
+  background-color: var(--podcast-primary-color);
   padding: 0px;
   /*geeft ruimte rondom het menu-icon*/
   border-radius: 8px;
@@ -38,6 +38,14 @@ body {
   /*centreert het icoon*/
   justify-content: center;
   /*centreert het icoon horizontaal*/
+  gap: 8px;
+  /*ruimte tussen het woord 'menu' en het hamburgericoon*/
+  
+   span{
+    display: none;
+    /*verbergt het woord 'menu' standaard op mobiel*/
+
+   }
 
 
   img{
@@ -283,6 +291,18 @@ omdat je daar waarscijnlijl een andere styling zal gebruiken*/
       right: 0;
        /*plaatst het zoekformulier aan de rechterkant van de header*/
     }
+    
+  }
+  .menu-icon span{
+      display: inline;
+    /*hierdoor verschijnt 'menu' alleen op tablet en desktop*/
+      font-size: 12px;
+    /*maakt het woord 'menu' kleiner op grotere schermen*/
+  }
+
+  .menu-icon{
+    padding: 4px 8px;
+    /*4px staat voor ruimte boven en onder, 8px staat voor links en recht*/
   }
 }
 
@@ -296,6 +316,15 @@ omdat je daar waarscijnlijl een andere styling zal gebruiken*/
       left: auto;
       right: 0;
     }
+  }
+
+  .menu-icon span {
+    display: inline;
+    font-size: 12px;
+  }
+
+  .menu-icon{
+    padding: 4px 8px;
   }
 
 
