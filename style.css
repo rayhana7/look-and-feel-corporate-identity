@@ -44,6 +44,7 @@ body {
    span{
     display: none;
     /*verbergt het woord 'menu' standaard op mobiel*/
+    font-weight: bold;
 
    }
 
